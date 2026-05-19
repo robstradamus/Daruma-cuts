@@ -73,31 +73,40 @@ export default function Home() {
           <h1 className="hero-title">DARUMA <span>CUTS</span></h1>
           <a href="#contacto" className="btn btn-reservar btn-lg">Reservar Turno</a>
         </div>
-        {/*Seccion Scroll */}
-        <div className="scroll-indicator"><i className="bi bi-chevron-double-down"></i></div>
-      </section>
+        
+        {/* Seccion Scroll */}
+      <div 
+        className="scroll-indicator"
+        onClick={() => {
+          document.getElementById('sobre-mi')?.scrollIntoView({ behavior: 'smooth' });
+        }}
+        style={{ cursor: 'pointer' }}
+      >
+        <i className="bi bi-chevron-double-down"></i>
+      </div>
+    </section>
 
-      {/* Sobre Mi*/}
-      <section id="sobre-mi" className="about-section section-padding">
-        <div className="container">
-          <div className="row align-items-center g-5">
-            <div className="col-lg-6 fade-in">
-              <div className="about-image">
-                <img src="/images/barber-profile.jpg" alt="Barbero" className="img-fluid" />
-              </div>
+    {/* Sobre Mi */}
+    <section id="sobre-mi" className="about-section section-padding">
+      <div className="container">
+        <div className="row align-items-center g-5">
+          <div className="col-lg-6 fade-in">
+            <div className="about-image">
+              <img src="/images/barber-profile.jpg" alt="Barbero" className="img-fluid" />
             </div>
-            <div className="col-lg-6 fade-in">
-              <h2 className="section-title">Sobre Mí</h2>
-              <p className="section-subtitle mb-4">Soy Lucas Barria creador de Daruma Cuts , un barbero apasionado por su trabajo .</p>
-              <div className="about-stats">
-                <div className="stat-item"><div className="stat-number">3+</div><div className="stat-label">Años Exp.</div></div>
-                <div className="stat-item"><div className="stat-number">50+</div><div className="stat-label">Clientes</div></div>
-                <div className="stat-item"><div className="stat-number">100%</div><div className="stat-label">Dedicación</div></div>
-              </div>
+          </div>
+          <div className="col-lg-6 fade-in">
+            <h2 className="section-title">Sobre Mí</h2>
+            <p className="section-subtitle mb-4">Soy Lucas Barria creador de Daruma Cuts, un barbero apasionado por su trabajo.</p>
+            <div className="about-stats">
+              <div className="stat-item"><div className="stat-number">3+</div><div className="stat-label">Años Exp.</div></div>
+              <div className="stat-item"><div className="stat-number">50+</div><div className="stat-label">Clientes</div></div>
+              <div className="stat-item"><div className="stat-number">100%</div><div className="stat-label">Dedicación</div></div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Mis Servicios */}
       <section id="servicios" className="services-section section-padding">
@@ -203,7 +212,7 @@ export default function Home() {
             <div className="col-md-6 text-center text-md-start mb-4 mb-md-0">
               <span className="footer-brand">DARUMA <span>CUTS</span></span>
               <p className="small text-muted mt-2 mb-0">Barbería Estilo Premium.</p>
-              <p className="small text-muted">Rio Grande, Tierra del Fuego.</p>
+              <p className="small text-muted">Rio Grande, Tierra del Fuego</p>
             </div>
 
             {/* Derecha : Redes Sociales */}
