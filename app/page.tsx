@@ -202,7 +202,7 @@ export default function Home() {
             <div className="col-md-6 text-center text-md-start mb-4 mb-md-0">
               <span className="footer-brand">DARUMA <span>CUTS</span></span>
               <p className="small text-muted mt-2 mb-0">Barbería Estilo Premium.</p>
-              <p className="small text-muted">Rio Grande, Tierra del Fuego.</p>
+              <p className="small text-muted">Rio Grande, Tierra del Fuego</p>
             </div>
 
             {/* Derecha : Redes Sociales */}
