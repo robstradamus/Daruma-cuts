@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-    --color-primary: #b63232ec; /* El rojo de Daruma */
-    --color-bg-dark: #0c0c0c;
+    --color-primary: #c50909ec; /* El rojo de Daruma */
+    --color-bg-dark: #181515;
     --color-bg-card: #1a1a1a;
-    --color-text: #f7f7f7;
-    --color-text-muted: #202020;
+    --color-text: #fffdfd;
+    --color-text-muted: #ffffff;
     --color-accent: #0e0d0d;
 }
 

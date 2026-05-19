@@ -73,6 +73,7 @@ export default function Home() {
           <h1 className="hero-title">DARUMA <span>CUTS</span></h1>
           <a href="#contacto" className="btn btn-reservar btn-lg">Reservar Turno</a>
         </div>
+        {/*Seccion Scroll */}
         <div className="scroll-indicator"><i className="bi bi-chevron-double-down"></i></div>
       </section>
 
@@ -192,45 +193,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer*/}
-      <footer className="footer pt-5 pb-3 border-top border-secondary">
+     {/* Footer */}
+      <footer className="footer bg-dark pt-5 pb-3 border-top border-secondary">
         <div className="container">
           {/* Fila Principal: Marca y Redes */}
           <div className="row align-items-center mb-4">
             
             {/* Izquierda: Marca */}
             <div className="col-md-6 text-center text-md-start mb-4 mb-md-0">
-              <span className="footer-brand">DARUMA <span>CUTS</span></span>
-              <p className="small text-muted mt-2 mb-0">Barbería Estilo Premium.</p>
-              <p className="small text-muted">Rio Grande, Tierra del Fuego.</p>
+              {/* Cambiamos a un h3 para darle más peso a la marca */}
+              <h3 className="footer-brand text-white fw-bold mb-2">
+                DARUMA <span className="text-secondary">CUTS</span>
+              </h3>
+              {/* Reemplazamos text-muted por text-white-50 para contraste en fondo oscuro */}
+              <p className="small text-white-50 mb-1">Barbería Estilo Premium.</p>
+              <p className="small text-white-50 mb-0">Río Grande, Tierra del Fuego.</p>
             </div>
 
             {/* Derecha : Redes Sociales */}
-            <div className="col-md-6" >
-              <div className="social-links d-flex justify-content-center justify-content-md-end gap-4 ">
-                <a href="https://www.instagram.com/daruma.cuts/" target="_blank" className="social-link">
-                  <i className="bi bi-instagram"></i>
+            <div className="col-md-6">
+              <div className="social-links d-flex justify-content-center justify-content-md-end gap-3">
+                {/* Agregamos rel="noopener noreferrer" por seguridad en React y mejoramos el diseño de los íconos */}
+                <a href="https://www.instagram.com/daruma.cuts/" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style={{ width: '45px', height: '45px' }}>
+                  <i className="bi bi-instagram fs-5"></i>
                 </a>
-                <a href="https://www.facebook.com/lucas.barria.161" target="_blank" className="social-link">
-                  <i className="bi bi-facebook"></i>
+                <a href="https://www.facebook.com/lucas.barria.161" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style={{ width: '45px', height: '45px' }}>
+                  <i className="bi bi-facebook fs-5"></i>
                 </a>
-                <a href="https://wa.me/5492964404353" target="_blank" className="social-link">
-                  <i className="bi bi-whatsapp"></i>
+                <a href="https://wa.me/5492964404353" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style={{ width: '45px', height: '45px' }}>
+                  <i className="bi bi-whatsapp fs-5"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Copyright: */}
-          <div className="copy row mt-3">
+          {/* Línea divisoria sutil para separar el copyright */}
+          <hr className="border-secondary opacity-50 mb-4" />
+
+          {/* Copyright */}
+          <div className="copy row">
             <div className="col-12 text-center">
-              <p className="small text-muted mb-0">
-                © 2026 <span className="text-white">Darkor Tech</span>. Todos los derechos reservados.
+              <p className="small text-white-50 mb-0">
+                {/* Usamos JavaScript para que el año se actualice solo */}
+                © {new Date().getFullYear()} <span className="text-white fw-semibold tracking-wide">Darkor Tech</span>. Todos los derechos reservados.
               </p>
             </div>
           </div>
         </div>
       </footer>
-    </main>
-  )
+      </main>
+  );
 }

@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Daruma Cuts | Barbería Premium',
+  title: 'Barberia | Daruma Cuts',
   description: 'Cortes de autor y estilo profesional en Río Grande. Agendá tu turno por WhatsApp.',
   icons: {
     icon: '/images/logoindx.png', // Este es el icono de la pestaña
