@@ -71,7 +71,7 @@ export default function Home() {
         <div className="hero-content fade-in text-center">
 
         <p className="hero-subtitle">
-        <span className="subtitle-lines">—</span> BARBERO PROFESIONAL<span className="subtitle-lines">—</span>
+        <span className="subtitle-lines">—</span> BARBERO PROFESIONAL <span className="subtitle-lines">—</span>
         </p>
           <h1 className="hero-title">DARUMA <span>CUTS</span></h1>
           <a href="#contacto" className="btn btn-reservar btn-lg">Reservar Turno</a>
@@ -232,17 +232,17 @@ export default function Home() {
           {/* Fila Principal: Marca y Redes */}
           <div className="row align-items-center mb-4">
             
-            {/* Izquierda: Marca */}
+            {/*Marca */}
             <div className="col-md-6 text-center text-md-start mb-4 mb-md-0">
               <span className="footer-brand">DARUMA <span>CUTS</span></span>
-              <p className="small text-muted mt-2 mb-0">Barbería Estilo Premium.</p>
-              <p className="small text-muted">Rio Grande, Tierra del Fuego</p>
+              <p className="small text-mt-2 mb-0">Barbería Estilo Premium.</p>
+              <p className="small text">Rio Grande, Tierra del Fuego</p>
             </div>
 
-            {/* Derecha : Redes Sociales */}
+            {/* Redes Sociales */}
             <div className="col-md-6">
               <div className="social-links d-flex justify-content-center justify-content-md-end gap-3">
-                {/* Agregamos rel="noopener noreferrer" por seguridad en React y mejoramos el diseño de los íconos */}
+                {/* diseño de los íconos */}
                 <a href="https://www.instagram.com/daruma.cuts/" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style={{ width: '45px', height: '45px' }}>
                   <i className="bi bi-instagram fs-5"></i>
                 </a>
