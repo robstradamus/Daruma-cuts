@@ -201,13 +201,9 @@ export default function Home() {
             
             {/* Izquierda: Marca */}
             <div className="col-md-6 text-center text-md-start mb-4 mb-md-0">
-              {/* Cambiamos a un h3 para darle más peso a la marca */}
-              <h3 className="footer-brand text-white fw-bold mb-2">
-                DARUMA <span className="text-secondary">CUTS</span>
-              </h3>
-              {/* Reemplazamos text-muted por text-white-50 para contraste en fondo oscuro */}
-              <p className="small text-white-50 mb-1">Barbería Estilo Premium.</p>
-              <p className="small text-white-50 mb-0">Río Grande, Tierra del Fuego.</p>
+              <span className="footer-brand">DARUMA <span>CUTS</span></span>
+              <p className="small text-muted mt-2 mb-0">Barbería Estilo Premium.</p>
+              <p className="small text-muted">Rio Grande, Tierra del Fuego.</p>
             </div>
 
             {/* Derecha : Redes Sociales */}
