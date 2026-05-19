@@ -3,13 +3,24 @@
 @tailwind utilities;
 
 :root {
-    --color-primary: #c50909ec; /* El rojo de Daruma */
-    --color-bg-dark: #181515;
-    --color-bg-card: #1a1a1a;
-    --color-text: #fffdfd;
-    --color-text-muted: #ffffff;
-    --color-accent: #0e0d0d;
+    /* El rojo Daruma: Un rojo sólido, intenso y sin opacidad para botones y precios. Llama a la acción. */
+    --color-primary: #dc2626; 
+    
+    /* Fondo principal: El estándar "Dark Mode" profesional. No es negro puro, descansa la vista. */
+    --color-bg-dark: #121212; 
+    
+    /* Tarjetas: Más claras que el fondo para crear profundidad (efecto de capas). */
+    --color-bg-card: #292828; 
+    
+    /* Texto principal: Blanco humo. El blanco puro (#FFF) en fondos oscuros lastima la vista al leer. */
+    --color-text: #ffffff; 
+    
+    /* Acentos: Un gris oscuro para bordes sutiles o líneas divisorias (como la del footer). */
+    --color-accent: #ab2949; 
+
+    --color-primary-hover: #f70000; /* Un rojo más oscuro y elegante para el hover */
 }
+
 
 * {
     margin: 0;
@@ -280,6 +291,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text);
     box-shadow: 0 0 0 3px rgba(211, 52, 52, 0.1);
     outline: none;
+}
+
+.form-control-custom::placeholder{
+    color:#ffffff;
+    opacity: 0.7;;
+
 }
 
 footer .copy {

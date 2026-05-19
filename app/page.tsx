@@ -69,11 +69,14 @@ export default function Home() {
         <div className="hero-bg"></div>
         <div className="hero-overlay"></div>
         <div className="hero-content fade-in text-center">
-          <p className="hero-subtitle">Barbería Premium</p>
+
+        <p className="hero-subtitle">
+        <span className="subtitle-lines">—</span> BARBERO PROFESIONAL<span className="subtitle-lines">—</span>
+        </p>
           <h1 className="hero-title">DARUMA <span>CUTS</span></h1>
           <a href="#contacto" className="btn btn-reservar btn-lg">Reservar Turno</a>
         </div>
-        
+
         {/* Seccion Scroll */}
       <div 
         className="scroll-indicator"
@@ -90,18 +93,40 @@ export default function Home() {
     <section id="sobre-mi" className="about-section section-padding">
       <div className="container">
         <div className="row align-items-center g-5">
+          
+          {/*Imagen */}
           <div className="col-lg-6 fade-in">
-            <div className="about-image">
-              <img src="/images/barber-profile.jpg" alt="Barbero" className="img-fluid" />
+            <div className="about-image position-relative">
+              <img src="/images/barber-profile.jpg" alt="Lucas Barria - Barbero" className="img-fluid rounded shadow" />
             </div>
           </div>
+
+          {/* Información */}
           <div className="col-lg-6 fade-in">
             <h2 className="section-title">Sobre Mí</h2>
-            <p className="section-subtitle mb-4">Soy Lucas Barria creador de Daruma Cuts, un barbero apasionado por su trabajo.</p>
-            <div className="about-stats">
-              <div className="stat-item"><div className="stat-number">3+</div><div className="stat-label">Años Exp.</div></div>
-              <div className="stat-item"><div className="stat-number">50+</div><div className="stat-label">Clientes</div></div>
-              <div className="stat-item"><div className="stat-number">100%</div><div className="stat-label">Dedicación</div></div>
+            <p className="section-subtitle fs-5 mb-3">
+              Soy Lucas Barria, creador de <span className="fw-bold">Daruma Cuts</span>.
+            </p>
+            
+            {/* Párrafo descriptivo para conectar con el cliente */}
+            <p className="text-white-50 mb-4" style={{ lineHeight: '1.8' }}>
+              Más que un simple corte de pelo, mi objetivo es ofrecer una experiencia de estilo y cuidado personal en Río Grande. Mi enfoque combina las técnicas clásicas de barbería con las tendencias urbanas más modernas, prestando máxima atención a los detalles para garantizar que cada cliente encuentre su mejor versión.
+            </p>
+
+            {/* Tus estadísticas originales, mejoradas con flexbox para que queden alineadas */}
+            <div className="about-stats d-flex gap-4 mb-5 border-top border-secondary pt-4 mt-4">
+              <div className="stat-item text-center">
+                <div className="stat-number fs-3 fw-bold" style={{ color: 'var(--color-primary)' }}>3+</div>
+                <div className="stat-label small text-white-50">Años Exp.</div>
+              </div>
+              <div className="stat-item text-center border-start border-secondary ps-4">
+                <div className="stat-number fs-3 fw-bold" style={{ color: 'var(--color-primary)' }}>50+</div>
+                <div className="stat-label small text-white-50">Clientes Fieles</div>
+              </div>
+              <div className="stat-item text-center border-start border-secondary ps-4">
+                <div className="stat-number fs-3 fw-bold" style={{ color: 'var(--color-primary)' }}>100%</div>
+                <div className="stat-label small text-white-50">Dedicación</div>
+              </div>
             </div>
           </div>
         </div>
@@ -116,16 +141,15 @@ export default function Home() {
           </div>
           <div className="row g-4">
             {[
-              { t: 'Corte Clásico', i: 'bi-scissors', p: '$0' },
-              { t: 'Barba Completa', i: 'bi-droplet-half', p: '$0' },
-              { t: 'Corte + Barba', i: 'bi-award', p: '$0' },
-              { t: 'Experiencia VIP', i: 'bi-stars', p: '$0' }
+              { t: 'Corte Clásico' },
+              { t: 'Barba Completa',  },
+              { t: 'Corte + Barba', },
+              { t: 'Experiencia VIP'}
             ].map((s, i) => (
               <div key={i} className="col-md-6 col-lg-3 fade-in">
                 <div className="service-card text-center">
                   <div className="service-icon mx-auto"><i className={`bi ${s.i}`}></i></div>
                   <h3 className="service-title">{s.t}</h3>
-                  <div className="service-price">{s.p}</div>
                 </div>
               </div>
             ))}
