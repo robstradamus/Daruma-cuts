@@ -42,27 +42,31 @@ export default function Home() {
   return (
     <main>
       {/* Navbar con todos los enlaces */}
-      <nav className={`navbar-custom fixed-top w-100 ${scrolled ? 'scrolled' : ''}`}>
-        <div className="container d-flex justify-content-between align-items-center">
-          <div className="d-flex align-items-center">
-             <a className="navbar-brand me-2" href="#">DARUMA <span>CUTS</span></a>
-             <img src="/images/logoindx.png" alt="Logo" style={{ width: '60px', height: '60px' }} />
-          </div>
-          
-          <button className="d-lg-none btn text-white border-0" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <i className={`bi ${isMenuOpen ? 'bi-x-lg' : 'bi-list'} fs-2`}></i>
-          </button>
-
-          <div className={`navbar-links d-lg-flex align-items-center ${isMenuOpen ? 'd-block' : 'd-none'}`}>
-            <a className="nav-link" href="#inicio" onClick={() => setIsMenuOpen(false)}>Inicio</a>
-            <a className="nav-link" href="#sobre-mi" onClick={() => setIsMenuOpen(false)}>Sobre Mí</a>
-            <a className="nav-link" href="#servicios" onClick={() => setIsMenuOpen(false)}>Servicios</a>
-            <a className="nav-link" href="#galeria" onClick={() => setIsMenuOpen(false)}>Galería</a>
-            <a className="nav-link" href="#contacto" onClick={() => setIsMenuOpen(false)}>Contacto</a>
-            <a href="#contacto" className="btn btn-reservar ms-lg-3 mt-3 mt-lg-0">Reservar Turno</a>
-          </div>
+    <nav className={`navbar-custom fixed-top w-100 ${scrolled ? 'scrolled' : ''}`}>
+      <div className="container d-flex justify-content-between align-items-center">
+        
+        {/* Logo y Marca */}
+        <div className="d-flex align-items-center">
+           <a className="navbar-brand me-2" href="#">DARUMA <span>CUTS</span></a>
+           <img src="/images/logoindx.png" alt="Logo Daruma" style={{ width: '60px', height: '60px' }} />
         </div>
-      </nav>
+        
+        {/* (Mobile) */}
+        <button className="d-lg-none btn text-white border-0" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <i className={`bi ${isMenuOpen ? 'bi-x-lg' : 'bi-list'} fs-2`}></i>
+        </button>
+
+        {/* Enlaces y Botón (Controlados por la clase 'is-open') */}
+        <div className={`navbar-links d-lg-flex align-items-center ${isMenuOpen ? 'is-open' : ''}`}>
+          <a className="nav-link" href="#inicio" onClick={() => setIsMenuOpen(false)}>Inicio</a>
+          <a className="nav-link" href="#sobre-mi" onClick={() => setIsMenuOpen(false)}>Sobre Mí</a>
+          <a className="nav-link" href="#servicios" onClick={() => setIsMenuOpen(false)}>Servicios</a>
+          <a className="nav-link" href="#galeria" onClick={() => setIsMenuOpen(false)}>Galería</a>
+          <a className="nav-link" href="#contacto" onClick={() => setIsMenuOpen(false)}>Contacto</a>
+          <a href="#contacto" className="btn btn-reservar ms-lg-3 mt-3 mt-lg-0" onClick={() => setIsMenuOpen(false)}>Reservar Turno</a>
+        </div>
+      </div>
+    </nav>
 
       {/* Hero*/}
       <section id="inicio" className="hero-section">
@@ -71,13 +75,15 @@ export default function Home() {
         <div className="hero-content fade-in text-center">
 
         <p className="hero-subtitle">
-        <span className="subtitle-lines">—</span> BARBERO PROFESIONAL <span className="subtitle-lines">—</span>
+          <span className="subtitle-lines">—</span> 
+          <span className="hero-text-mobile">BARBERÍA PREMIUM</span> 
+          <span className="subtitle-lines">—</span>
         </p>
           <h1 className="hero-title">DARUMA <span>CUTS</span></h1>
           <a href="#contacto" className="btn btn-reservar btn-lg">Reservar Turno</a>
         </div>
 
-        {/* Seccion Scroll */}
+        
       <div 
         className="scroll-indicator"
         onClick={() => {
@@ -201,6 +207,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Seccion Reservar*/ }
             <div className="col-lg-7 fade-in">
               <div className="bg-dark p-4 rounded-4 shadow">
                 <h3 className="mb-4 text-left">Reserva tu Turno</h3>

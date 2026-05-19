@@ -277,7 +277,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-control-custom {
     background: var(--color-bg-dark);
-    border: 1px solid rgba(199, 47, 47, 0.723);
+    border: 1px solid rgba(188, 45, 45, 0.723);
     color: var(--color-text);
     padding: 0.8rem 1rem;
     border-radius: 6px;
@@ -324,24 +324,71 @@ footer .red-social icons{
     transform: translateY(0);
 }
 
-/* Responsive */
+/* Control exclusivo del texto central del Hero */
+.hero-text-mobile {
+    white-space: nowrap; /* Esta es la orden estricta: NUNCA te partas en dos renglones */
+}
 
+/* Solo para celulares pequeños */
+@media (max-width: 576px) {
+    .hero-text-mobile {
+        font-size: 0.75rem; 
+        letter-spacing: 2px; 
+    }
+    
+    .subtitle-lines {
+        margin: 0 5px; /* Acercamos los guiones para que todo entre perfecto */
+    }
+}
+/* =========================================
+   NAVBAR RESPONSIVE - DARUMA CUTS
+   ========================================= */
 .navbar-links {
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  gap: .2rem;
+}
 
+/*Comportamiento en Móvil  */
 @media (max-width: 991px) {
   .navbar-links {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--color-bg-card);
+    background-color: var(--color-bg-dark);
     padding: 2rem;
-    border-top: 1px solid var(--color-primary);
-  }
+    border-top: 2px solid var(--color-primary);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    z-index: -1;
 }
 
-.map-container iframe {
-  filter: grayscale(1) invert(92%) contrast(85%);
+  .navbar-links.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 1000;
 }
+
+  .navbar-links .nav-link {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+  .navbar-links .btn-reservar {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 1.5rem !important;
+  }
 }
